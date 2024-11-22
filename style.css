@@ -1,0 +1,229 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive; /* Add this font from Google Fonts */
+    background: linear-gradient(to bottom, #ffe6f0, #fff); /* Soft pink gradient */
+    color: #cc6699; /* Hello Kitty pink for text */
+    text-align: center;
+}
+
+/* Header Styling */
+.site-header {
+    background: linear-gradient(to right, #ffe6f0, #ffcce6); /* Soft pink gradient */
+    color: #ff3366; /* Vibrant pink for text */
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid #ff99cc; /* Adds a stylish border at the bottom */
+    font-family: 'Patrick Hand', cursive;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.site-header h1 {
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+.site-header p {
+    font-size: 18px;
+    margin: 0;
+    color: #cc6699; /* Softer pink for the message */
+}
+
+
+/* Page Title */
+h1
+{
+    color: #ff3366; 
+    padding-bottom: 20px;
+    font-family: 'Patrick Hand', cursive;
+    text-shadow: 2px 2px #ffc0cb; 
+}
+/* Main Image Styling */
+.main-image {
+    text-align: center;
+    margin: 20px 0;
+
+}
+
+.main-image img {
+    max-width: 100%;
+    height: auto;    
+    transition: transform 0.3s ease;
+    border: 5px solid #ff99cc;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.main-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    width: 90%;
+    max-width: 1000px; 
+    margin: 20px auto; 
+    justify-content: center; 
+}
+/* Thumbnail Styling */
+.thumbnail {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    border: 3px solid #ffcce0;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 182, 193, 0.9);
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+    border: 5px solid #ff99cc;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ff99cc; 
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    background-color: #ffe6f9; 
+    border: 5px solid #ff99cc; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+/* Slides */
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    background: #85B4FF;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.prev:hover, .next:hover {
+    background: #ff6699; 
+}
+
+.prev {
+    left: 10px; 
+}
+
+.next {
+    right: 10px; 
+}
+
+/* Active Slide */
+.active {
+    display: block;
+}
+
+/* Footer Styling */
+.site-footer {
+    background-color: #ffe6f0; 
+    color: #cc6699; 
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-top: 3px solid #ff99cc; 
+    font-family: 'Patrick Hand', cursive;
+    font-size: 16px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+.site-footer strong {
+    color: #ff3366; 
+}
+
+
+/* Responsive Design for iPhone X/11 */
+@media only screen and (max-width: 414px) {
+    body {
+        padding: 30px;
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 24px; 
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+
+    .thumbnail img {
+        border-radius: 40px; 
+    }
+
+    .modal-content {
+        max-width: 100%; 
+        max-height: 70%; 
+    }
+
+    .close {
+        font-size: 20px; 
+    }
+}
